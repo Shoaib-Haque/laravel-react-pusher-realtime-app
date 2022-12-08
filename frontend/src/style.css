@@ -1,0 +1,56 @@
+.buttons-dropdown {
+  width: 100%;
+  table-layout: fixed;
+}
+.buttons-dropdown button {
+  width: 100%;
+}
+.search-bar:focus {
+  border-color: #000;
+  box-shadow: none;
+}
+
+@media only screen and (min-width: 350px) {
+  .csv-button {
+    float: right;
+  }
+}
+.dropdown-menu-action {
+  position: fixed !important;
+}
+
+.react-bootstrap-table table {
+  table-layout: auto;
+}
+
+div.center {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.card-body-scroll {
+  max-height: 350px;
+  min-height: 350px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+textarea.message{
+  resize: none;
+}
+
+.content-width{
+  width: fit-content;
+}
+
+.chatbox_div{
+  max-width: 320px!important;
+}
+
+.form-control:focus {
+   box-shadow:none;
+}
