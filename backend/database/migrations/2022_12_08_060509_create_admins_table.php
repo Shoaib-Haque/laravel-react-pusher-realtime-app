@@ -13,15 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+        Schema::create('admins', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('username', 5)->unique();
+            $table->char('password', 60);
         });
+
+        \DB::statement('ALTER TABLE admins AUTO_INCREMENT = 1;');
     }
 
     /**
@@ -31,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('admins');
     }
 };
