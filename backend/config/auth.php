@@ -40,13 +40,14 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-        'web' => [
-            'driver' => 'session',
-            'provider' => 'users',
-        ],
         'admin' => [
             'driver' => 'jwt',
-            'provider' => 'admin',
+            'provider' => 'admins',
+            'hash' => false,
+        ],
+        'user' => [
+            'driver' => 'jwt',
+            'provider' => 'users',
             'hash' => false,
         ]
     ],
@@ -73,13 +74,13 @@ return [
         //     'driver' => 'eloquent',
         //     'model' => App\Models\User::class,
         // ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admins::class,
+        ],
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\Users::class,
-        ],
-        'admin' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Admins::class,
         ],
 
         // 'users' => [
@@ -104,12 +105,12 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
-            'table' => 'password_resets',
-            'expire' => 60,
-            'throttle' => 60,
-        ],
+        // 'users' => [
+        //     'provider' => 'users',
+        //     'table' => 'password_resets',
+        //     'expire' => 60,
+        //     'throttle' => 60,
+        // ],
     ],
 
     /*
