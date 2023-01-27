@@ -60,9 +60,8 @@ useEffect(() => {
     pusherChannel.unbind("new-message");
     pusherChannel.bind("new-message", (pusherData) => {
       const newState1 = chatBoxes.map((chatBox, index) => {
-          if (chatBox.receiver_id == pusherData.sender_id) {
+          if (chatBox.receiver_id === pusherData.sender_id) {
               flag = true;
-              console.log(flag);
               chatBox.messages.unshift(pusherData);
               return { ...chatBox, messages: chatBox.messages };
           }
