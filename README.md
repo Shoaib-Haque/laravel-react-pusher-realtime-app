@@ -39,12 +39,12 @@
         <li><strong>publish the jwt package’s configuration</strong><br>
             php artisan vendor:publish --provider="Tymon\JWTAuth\Providers\LaravelServiceProvider"</li>
         <li><strong>generate jwt secret key</strong><br>php artisan jwt:secret</li>
-        <li><strong>create a middleware for API</strong></li>
+        <li><strong>create middleware for API</strong></li>
         <ul>
             <li>php artisan make:middleware Api</li>
             <li>copy class content from vendor\laravel\framework\src\Illuminate\Routing\Middleware\SubstituteBindings.php and paste inside Middleware/Api.php</li>
         </ul>
-        <li><strong>Configure Auth guard: goto config/auth.php</strong><br></li>
+        <li><strong>configure auth guard: goto config/auth.php</strong><br></li>
         <ul>
             <li>
             'guards' => [<br>
